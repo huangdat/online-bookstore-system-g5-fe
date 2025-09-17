@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Literary bookstore color palette */
+    --background: 45 15% 97%;
+    --foreground: 157 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 157 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 157 25% 15%;
+
+    /* Deep forest green primary */
+    --primary: 157 65% 25%;
+    --primary-foreground: 45 15% 97%;
+
+    /* Warm secondary */
+    --secondary: 45 25% 88%;
+    --secondary-foreground: 157 25% 15%;
+
+    --muted: 45 15% 92%;
+    --muted-foreground: 157 15% 45%;
+
+    --accent: 35 45% 85%;
+    --accent-foreground: 157 25% 15%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 45 15% 97%;
+
+    --border: 45 15% 85%;
+    --input: 45 15% 85%;
+    --ring: 157 65% 25%;
+
+    /* Custom bookstore tokens */
+    --primary-glow: 157 45% 35%;
+    --primary-dark: 157 85% 15%;
+    --warm-cream: 45 35% 95%;
+    --book-spine: 25 35% 75%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-warm: linear-gradient(180deg, hsl(var(--warm-cream)), hsl(var(--secondary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)));
+    
+    /* Shadows */
+    --shadow-book: 0 4px 20px -4px hsl(var(--primary) / 0.15);
+    --shadow-elegant: 0 10px 40px -10px hsl(var(--primary) / 0.2);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.3);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 157 25% 8%;
+    --foreground: 45 15% 95%;
+
+    --card: 157 25% 10%;
+    --card-foreground: 45 15% 95%;
+
+    --popover: 157 25% 10%;
+    --popover-foreground: 45 15% 95%;
+
+    --primary: 157 45% 70%;
+    --primary-foreground: 157 25% 8%;
+
+    --secondary: 157 15% 15%;
+    --secondary-foreground: 45 15% 95%;
+
+    --muted: 157 15% 15%;
+    --muted-foreground: 45 15% 70%;
+
+    --accent: 35 25% 25%;
+    --accent-foreground: 45 15% 95%;
+
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 157 25% 8%;
+
+    --border: 157 15% 20%;
+    --input: 157 15% 20%;
+    --ring: 157 45% 70%;
+    
+    --primary-glow: 157 35% 60%;
+    --primary-dark: 157 65% 45%;
+    --warm-cream: 157 25% 12%;
+    --book-spine: 25 15% 30%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-warm: linear-gradient(180deg, hsl(var(--warm-cream)), hsl(var(--secondary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)));
+    
+    --shadow-book: 0 4px 20px -4px hsl(var(--primary) / 0.25);
+    --shadow-elegant: 0 10px 40px -10px hsl(var(--primary) / 0.3);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
